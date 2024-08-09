@@ -1,5 +1,6 @@
 import { assets, openAIURL, authorURL } from "../../../assets/assets";
 import { Link } from "react-router-dom";
+import Chats from "../Chats/Chats";
 
 const ChatContainer = ({isMenuOpen, setIsMenuOpen}) => {
   return (
@@ -23,20 +24,13 @@ const ChatContainer = ({isMenuOpen, setIsMenuOpen}) => {
 
         <div className={`chats flex flex-col items-end gap-7 overflow-y-auto py-5 px-[18rem] h-full ${isMenuOpen && 'px-[1.5rem]'} transition-all`}>
 
-          <div className="client-query bg-gptInputBg p-5 rounded-3xl w-[65%]">
-            <p className="text-gptColor/[.9]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, natus vero? Nesciunt velit, adipisci enim deleniti perferendis laborum voluptate aut pariatur assumenda voluptatibus necessitatibus porro recusandae fugit nobis! Vitae, cupiditate!</p>
-          </div>
-
-          <div className="gpt-response flex items-start gap-4">
-
-            <img src={assets.gptLogo} className="w-10 h-10 p-2 border-gptBorderColor border rounded-full" alt="" />
-
-            <div className="generated-response">
-              <p className="text-gptColor/[.9]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, natus vero? Nesciunt velit, adipisci enim deleniti perferendis laborum voluptate aut pariatur assumenda voluptatibus necessitatibus porro recusandae fugit nobis! Vitae, cupiditate!</p>
-              <div className="copy-btn mt-3 cursor-pointer w-[fit-content]" title="copy"><img src={assets.copy} alt="" className="w-[1.1rem]"/></div>
-            </div>
-
-          </div>
+          <Chats 
+          isClient={true} 
+          ClientQuery={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, natus vero? Nesciunt velit, adipisci enim deleniti perferendis laborum voluptate aut pariatur assumenda voluptatibus necessitatibus porro recusandae fugit nobis! Vitae, cupiditate!"}
+          
+          isGPT={true}
+          gptResponse={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, natus vero? Nesciunt velit, adipisci enim deleniti perferendis laborum voluptate aut pariatur assumenda voluptatibus necessitatibus porro recusandae fugit nobis! Vitae, cupiditate!"}
+          />
 
         </div>
 
