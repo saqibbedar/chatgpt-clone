@@ -8,7 +8,7 @@ const ChatgptContainer = () => {
 
   return (
     <div className="gpt-container">
-      <ChatContainer setIsMenuOpen={setIsMenuOpen}/>
+      <ChatContainer isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
       <SideBar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
     </div>
   )

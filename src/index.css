@@ -8,3 +8,32 @@ html, body{
   font-family: "Poppins", sans-serif;
   /* font-size: 62.5%; */
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6a6a6a;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media (width < 1167px) {
+  .chats, .chat-footer{
+    padding: 0 1.5rem;
+  }
+}
+
+@media (width <567px) {
+  .client-query{
+    width: 100%;
+  }
+}

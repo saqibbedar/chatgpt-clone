@@ -9,9 +9,9 @@ const SideBar = ({isMenuOpen, setIsMenuOpen}) => {
   return (
     <>
     
-    <div className={`side-bar-overlay absolute top-0 left-0 w-full h-full bg-[#0009] ${isMenuOpen ? 'opacity-1 visible' : 'opacity-0 invisible'} transition-all`} onClick={()=>setIsMenuOpen(false)}>
+    <div className={`side-bar-overlay absolute top-0 left-0 w-full h-full bg-[#0007] ${isMenuOpen ? 'opacity-1 visible' : 'opacity-0 invisible'} transition-all`} onClick={()=>setIsMenuOpen(false)}>
 
-      <div onClick={handleSidebarClick} className={`side-bar flex bg-[#3f3f3f] absolute top-0 left-0 flex-col justify-between h-full w-[85%] ${isMenuOpen ? 'left-[0]' : 'left-[-20rem]'} px-10 py-8 overflow-x-hidden overflow-y-auto transition-all xs:w-[20rem] `}>
+      <div onClick={handleSidebarClick} className={`side-bar flex bg-gptBg absolute top-0 left-0 flex-col justify-between h-full w-[20rem] ${isMenuOpen ? 'left-[0]' : 'left-[-20rem]'} px-10 py-8 overflow-x-hidden overflow-y-auto transition-all max-[456px]:w-[85%] border-r border-gptBorderColor`}>
         
         <div className="side-bar-top flex flex-col gap-y-6">
           <div className="flex items-center gap-4">
@@ -19,7 +19,7 @@ const SideBar = ({isMenuOpen, setIsMenuOpen}) => {
             <h1 className='text-gptColor text-2xl font-medium'>ChatGPT</h1>
           </div>
 
-          <button className='text-lg text-gptColor flex items-center justify-center gap-2 bg-[red] py-3 rounded-md'><img src={assets.add} alt="add button" className='w-5'/>New Chat</button>
+          <button className='text-lg text-gptColor flex items-center justify-center gap-2 bg-[#5A4bFF] py-3 rounded-md'><img src={assets.add} alt="add button" className='w-5'/>New Chat</button>
 
           <div className='flex flex-col gap-y-3 whitespace-nowrap border-t border-gptBorderColor mt-2 pt-6'>
             
