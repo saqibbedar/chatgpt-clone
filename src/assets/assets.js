@@ -9,6 +9,7 @@ import send from "./send.svg";
 import userIcon from "./user-icon.png";
 import hamburger from './hamburger.svg';
 import copy from './copy.svg';
+import copied from './copied.svg'
 
 export const assets = {
   gptLogo,
@@ -21,7 +22,8 @@ export const assets = {
   send,
   userIcon,
   hamburger,
-  copy
+  copy,
+  copied
 };
 
 export const openAIURL = {
