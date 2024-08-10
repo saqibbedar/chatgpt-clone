@@ -2,7 +2,6 @@ import { useState } from "react";
 import { assets } from "../../../assets/assets"
 
 const Chats = ({isClient, ClientQuery, isGPT, gptResponse}) => {
-
     const [isCopied, setIsCopied] = useState(false);
 
     const handleCopy = (text)=>{
@@ -18,11 +17,14 @@ const Chats = ({isClient, ClientQuery, isGPT, gptResponse}) => {
 
   return (
     <>
-        <div className={`client-query ${isClient? 'block' : 'hidden'} bg-gptInputBg p-5 rounded-3xl w-[65%]`}>
-            <p className="text-gptColor/[.9]">{isClient && ClientQuery}</p>
+        {isClient && <div className={`client-query flex justify-end`}>
+            <p className="bg-gptInputBg p-5 rounded-3xl w-[65%] text-gptColor/[.9]">{isClient && ClientQuery}</p>
         </div>
+        }
 
-        <div className={`gpt-response ${isGPT? 'flex' : 'hidden'} items-start gap-4`}>
+        {isGPT &&
+            
+            <div className={`gpt-response flex items-start gap-4`}>
 
             <img src={assets.gptLogo} className="w-10 h-10 p-2 border-gptBorderColor border rounded-full" alt="chatGPT logo" />
 
@@ -34,7 +36,9 @@ const Chats = ({isClient, ClientQuery, isGPT, gptResponse}) => {
                 </div>
             </div>
 
-        </div>
+            </div>
+        }
+
     </>
   )
 }

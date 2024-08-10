@@ -33,7 +33,7 @@ html, body{
 }
 
 @media (width <567px) {
-  .client-query{
+  .client-query p{
     width: 100%;
   }
 }
